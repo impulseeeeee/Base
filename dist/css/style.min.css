@@ -93,9 +93,17 @@ h6 {
 
 /*--------------------*/
 .container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+h1 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 60px;
+  line-height: 140%;
+  color: #FFFFFF;
 }
 
 .btn {
@@ -111,12 +119,21 @@ h6 {
   color: #1D92FF;
 }
 
+.sub-title {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0.05em;
+  color: #1D92FF;
+}
+
 body.active {
   overflow: hidden;
 }
 
 header {
-  padding: 50px 0;
+  padding: 50px 0 0 0;
   background: #002547;
   color: #fefefe;
 }
@@ -214,6 +231,7 @@ header .container .burger {
     transition: all 0.3s ease 0s;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
+    z-index: 6;
   }
   header .container .navbar .menu {
     display: flex;
@@ -226,5 +244,114 @@ header .container .burger {
 @media (max-width: 475px) {
   header .btn {
     display: none;
+  }
+}
+.saas-banner {
+  padding: 50px 0;
+  background: #002547;
+}
+.saas-banner .container {
+  display: flex;
+  align-items: center;
+}
+.saas-banner__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 20px;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: rgba(255, 255, 255, 0.7);
+}
+.saas-banner__info span {
+  color: #1D92FF;
+  font-weight: 700;
+}
+.saas-banner__info .quote {
+  padding: 5px 10px;
+  border-top: 0.5px solid rgba(255, 255, 255, 0.1254901961);
+  position: relative;
+}
+.saas-banner__info .quote::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 30px;
+  border-left: 0.5px dashed rgba(255, 255, 255, 0.4862745098);
+  border-bottom: 0.5px dashed rgba(255, 255, 255, 0.4862745098);
+}
+.saas-banner__info .quote::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 4%;
+  border-top: 5px solid transparent;
+  border-right: 10px solid rgba(255, 255, 255, 0.4862745098);
+  border-bottom: 5px solid transparent;
+}
+.saas-banner__info .commerce {
+  color: #fefefe;
+  text-decoration: underline;
+}
+.saas-banner__info .buttons {
+  display: flex;
+  gap: 30px;
+}
+.saas-banner__info .underlined {
+  border-bottom: 5px solid #1D92FF;
+  max-width: 300px;
+  position: relative;
+}
+.saas-banner__info .underlined:before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 0;
+  border-bottom: 5px solid #fefefe;
+  width: calc(100% - 55px);
+}
+.saas-banner__photo {
+  max-width: 50%;
+}
+
+@media (max-width: 1200px) {
+  .saas-banner__info {
+    max-width: 80%;
+  }
+  .saas-banner__photo {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  .saas-banner__info {
+    max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .saas-banner__info .quote::after {
+    left: 7%;
+  }
+}
+@media (max-width: 425px) {
+  h1 {
+    font-size: 45px;
+    line-height: 140%;
+  }
+  .saas-banner {
+    padding: 30px 0;
+  }
+  .saas-banner .container {
+    padding: 0 15px;
+  }
+  .saas-banner .saas-banner__info {
+    gap: 5px;
+  }
+  .saas-banner .saas-banner__info .buttons {
+    flex-wrap: wrap;
+    gap: 15px;
   }
 }
