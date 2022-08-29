@@ -1,0 +1,57 @@
+.slogan {
+    .container {
+        display: flex;
+        align-items: center;
+
+        .slogan__photo {
+            max-width: 50%;
+        }
+
+        .slogan__info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            p {
+                font-family: 'Poppins';
+                font-size: 16px;
+                line-height: 160%;
+                color: rgba(1, 7, 13, 0.7);
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            .facts {
+                display: flex;
+                flex-direction: column;
+                gap: 25px;
+
+                .fact {
+                    display: flex;
+                    align-items: center;
+                    gap: 18px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+    .slogan {
+        .container {
+            flex-direction: column;
+
+            .slogan__photo {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .slogan__photo {
+        display: none;
+    }
+}

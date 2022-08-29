@@ -106,6 +106,17 @@ h1 {
   color: #FFFFFF;
 }
 
+h2 {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 39px;
+  line-height: 135%;
+  color: #000000;
+}
+h2 span {
+  font-weight: 600;
+}
+
 .btn {
   display: inline-block;
   padding: 15px 30px;
@@ -126,6 +137,7 @@ h1 {
   line-height: 160%;
   letter-spacing: 0.05em;
   color: #1D92FF;
+  text-transform: uppercase;
 }
 
 body.active {
@@ -353,5 +365,69 @@ header .container .burger {
   .saas-banner .saas-banner__info .buttons {
     flex-wrap: wrap;
     gap: 15px;
+  }
+}
+.partners .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 135px 10px;
+}
+
+@media (max-width: 1200px) {
+  .partners .container {
+    flex-wrap: wrap;
+    gap: 90px;
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .partners .container {
+    padding: 80px 10px;
+  }
+}
+.slogan .container {
+  display: flex;
+  align-items: center;
+}
+.slogan .container .slogan__photo {
+  max-width: 50%;
+}
+.slogan .container .slogan__info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.slogan .container .slogan__info p {
+  font-family: "Poppins";
+  font-size: 16px;
+  line-height: 160%;
+  color: rgba(1, 7, 13, 0.7);
+}
+.slogan .container .slogan__info p span {
+  font-weight: 600;
+}
+.slogan .container .slogan__info .facts {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.slogan .container .slogan__info .facts .fact {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+@media (max-width: 1024px) {
+  .slogan .container {
+    flex-direction: column;
+  }
+  .slogan .container .slogan__photo {
+    max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .slogan__photo {
+    display: none;
   }
 }

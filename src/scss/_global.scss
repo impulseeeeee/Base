@@ -10,7 +10,18 @@ h1 {
     font-size: 60px;
     line-height: 140%;
     color: #FFFFFF;
+}
 
+h2 {
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 39px;
+    line-height: 135%;
+    color: #000000;
+
+    span {
+        font-weight: 600;
+    }
 }
 
 .btn {
@@ -33,4 +44,5 @@ h1 {
     line-height: 160%;
     letter-spacing: 0.05em;
     color: #1D92FF;
+    text-transform: uppercase;
 }

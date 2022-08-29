@@ -1,0 +1,20 @@
+.partners .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 135px 10px;
+}
+
+@media (max-width:1200px) {
+    .partners .container {
+        flex-wrap: wrap;
+        gap: 90px;
+        justify-content: center;
+    }
+}
+
+@media (max-width:768px) {
+    .partners .container {
+        padding: 80px 10px;
+    }
+}
