@@ -1,0 +1,127 @@
+.stats {
+    margin: 50px 0;
+
+    .container {
+        display: flex;
+
+        .stats__info {
+            display: flex;
+            flex-direction: column;
+            gap: 50px;
+
+            .stats__buttons {
+                display: flex;
+                gap: 20px;
+
+                .btn {
+                    padding: 15px 60px;
+                    background: #1D92FF;
+                    color: #fefefe;
+                }
+
+                .white {
+                    border: 1px solid rgba(171, 171, 171, 0.317);
+                    background: #fefefe;
+                    color: #1D92FF;
+                }
+            }
+
+            .facts {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .fact {
+                    background: #fefefe;
+                    border: 1px solid rgba(171, 171, 171, 0.317);
+                    border-radius: 10px;
+                    padding: 10px;
+                    position: relative;
+
+                    .fact__title {
+                        display: block;
+                        font-family: 'Poppins';
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 150%;
+                        color: #01070D;
+                        opacity: 0.5;
+
+                        &:focus {
+                            color: #1D92FF;
+                            opacity: 1;
+                        }
+
+                        &::before,
+                        &::after {
+                            content: '';
+                            width: 10px;
+                            height: 1px;
+                            background-color: #000;
+                            position: absolute;
+                            top: 25px;
+                        }
+
+                        &::after {
+                            transform: rotate(45deg);
+                            right: 17px;
+                        }
+
+                        &::before {
+                            transform: rotate(-45deg);
+                            right: 10px;
+                        }
+                    }
+
+                    .fact__info {
+                        font-family: 'Poppins';
+                        font-size: 16px;
+                        line-height: 150%;
+                        color: rgba(1, 7, 13, 0.6);
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: all 0.3s ease-in-out;
+                    }
+                }
+            }
+        }
+
+        .stats__photo {
+            max-width: 50%;
+        }
+    }
+}
+
+@media (max-width:1000px) {
+    .stats {
+        .container {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            .stats__photo {
+                max-width: 100%;
+            }
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .stats {
+        .container {
+            .stats__info {
+                gap: 30px;
+
+                .stats__buttons {
+                    gap: 10px;
+                    flex-wrap: wrap;
+                    justify-content: center;
+
+                    .btn {
+                        width: 90%;
+                        text-align: center
+                    }
+                }
+            }
+        }
+    }
+}

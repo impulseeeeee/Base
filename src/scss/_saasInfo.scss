@@ -58,6 +58,12 @@
         .buttons {
             display: flex;
             gap: 30px;
+
+            .blue {
+                background: #002547;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                color: #fefefe;
+            }
         }
 
         .underlined {

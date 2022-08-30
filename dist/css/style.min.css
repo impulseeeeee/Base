@@ -313,6 +313,11 @@ header .container .burger {
   display: flex;
   gap: 30px;
 }
+.saas-banner__info .buttons .blue {
+  background: #002547;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #fefefe;
+}
 .saas-banner__info .underlined {
   border-bottom: 5px solid #1D92FF;
   max-width: 300px;
@@ -430,4 +435,109 @@ header .container .burger {
   .slogan__photo {
     display: none;
   }
+}
+.stats {
+  margin: 50px 0;
+}
+.stats .container {
+  display: flex;
+}
+.stats .container .stats__info {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.stats .container .stats__info .stats__buttons {
+  display: flex;
+  gap: 20px;
+}
+.stats .container .stats__info .stats__buttons .btn {
+  padding: 15px 60px;
+  background: #1D92FF;
+  color: #fefefe;
+}
+.stats .container .stats__info .stats__buttons .white {
+  border: 1px solid rgba(171, 171, 171, 0.317);
+  background: #fefefe;
+  color: #1D92FF;
+}
+.stats .container .stats__info .facts {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.stats .container .stats__info .facts .fact {
+  background: #fefefe;
+  border: 1px solid rgba(171, 171, 171, 0.317);
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+.stats .container .stats__info .facts .fact .fact__title {
+  display: block;
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  color: #01070D;
+  opacity: 0.5;
+}
+.stats .container .stats__info .facts .fact .fact__title:focus {
+  color: #1D92FF;
+  opacity: 1;
+}
+.stats .container .stats__info .facts .fact .fact__title::before, .stats .container .stats__info .facts .fact .fact__title::after {
+  content: "";
+  width: 10px;
+  height: 1px;
+  background-color: #000;
+  position: absolute;
+  top: 25px;
+}
+.stats .container .stats__info .facts .fact .fact__title::after {
+  transform: rotate(45deg);
+  right: 17px;
+}
+.stats .container .stats__info .facts .fact .fact__title::before {
+  transform: rotate(-45deg);
+  right: 10px;
+}
+.stats .container .stats__info .facts .fact .fact__info {
+  font-family: "Poppins";
+  font-size: 16px;
+  line-height: 150%;
+  color: rgba(1, 7, 13, 0.6);
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+.stats .container .stats__photo {
+  max-width: 50%;
+}
+
+@media (max-width: 1000px) {
+  .stats .container {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .stats .container .stats__photo {
+    max-width: 100%;
+  }
+}
+@media (max-width: 500px) {
+  .stats .container .stats__info {
+    gap: 30px;
+  }
+  .stats .container .stats__info .stats__buttons {
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .stats .container .stats__info .stats__buttons .btn {
+    width: 90%;
+    text-align: center;
+  }
+}
+body {
+  background: rgb(252, 252, 252);
 }
