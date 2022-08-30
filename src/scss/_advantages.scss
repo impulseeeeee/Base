@@ -1,0 +1,60 @@
+.advantages {
+    margin: 20px 0;
+
+    p {
+        font-family: 'Poppins';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 160%;
+        color: rgba(1, 7, 13, 0.7);
+    }
+
+    &__title {
+        text-align: center;
+        margin: 0 auto;
+        width: 50%;
+        margin-bottom: 60px;
+    }
+
+    &__list {
+        padding: 40px 70px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 60px 160px;
+        background:
+            linear-gradient(to right, #77bdff69 33%, #fff 0%) top/20px 4px repeat-x,
+            linear-gradient(#77bdff69 33%, #fff 0%) right/4px 20px repeat-y,
+            linear-gradient(#77bdff69 33%, #fff 0%) left/4px 20px repeat-y;
+        width: 100%;
+
+        .advantage {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            flex: 0 1 230px;
+        }
+    }
+}
+
+
+@media (max-width:800px) {
+    .advantages {
+        &__title {
+            width: 80%;
+        }
+
+        &__list {
+            gap: 40px 60px;
+        }
+    }
+}
+
+@media (max-width:375px) {
+    .advantages {
+        &__list {
+            padding: 30px;
+        }
+    }
+}

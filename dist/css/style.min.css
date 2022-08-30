@@ -117,6 +117,15 @@ h2 span {
   font-weight: 600;
 }
 
+h3 {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 150%;
+  text-transform: capitalize;
+  color: #000000;
+}
+
 .btn {
   display: inline-block;
   padding: 15px 30px;
@@ -536,6 +545,52 @@ header .container .burger {
   .stats .container .stats__info .stats__buttons .btn {
     width: 90%;
     text-align: center;
+  }
+}
+.advantages {
+  margin: 20px 0;
+}
+.advantages p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: rgba(1, 7, 13, 0.7);
+}
+.advantages__title {
+  text-align: center;
+  margin: 0 auto;
+  width: 50%;
+  margin-bottom: 60px;
+}
+.advantages__list {
+  padding: 40px 70px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 60px 160px;
+  background: linear-gradient(to right, rgba(119, 189, 255, 0.4117647059) 33%, #fff 0%) top/20px 4px repeat-x, linear-gradient(rgba(119, 189, 255, 0.4117647059) 33%, #fff 0%) right/4px 20px repeat-y, linear-gradient(rgba(119, 189, 255, 0.4117647059) 33%, #fff 0%) left/4px 20px repeat-y;
+  width: 100%;
+}
+.advantages__list .advantage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 0 1 230px;
+}
+
+@media (max-width: 800px) {
+  .advantages__title {
+    width: 80%;
+  }
+  .advantages__list {
+    gap: 40px 60px;
+  }
+}
+@media (max-width: 375px) {
+  .advantages__list {
+    padding: 30px;
   }
 }
 body {
