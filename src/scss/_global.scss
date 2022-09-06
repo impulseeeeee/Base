@@ -44,6 +44,12 @@ h3 {
     font-size: 18px;
     line-height: 130%;
     color: #1D92FF;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background: #1D92FF;
+    color: #fefefe;
 }
 
 .sub-title {

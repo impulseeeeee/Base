@@ -137,6 +137,12 @@ h3 {
   font-size: 18px;
   line-height: 130%;
   color: #1D92FF;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #1D92FF;
+  color: #fefefe;
 }
 
 .sub-title {
@@ -184,6 +190,10 @@ header .container .menu a {
   font-size: 16px;
   line-height: 130%;
   color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+}
+header .container .menu a:hover {
+  color: rgb(255, 255, 255);
 }
 header .container .menu a.active {
   color: #fefefe;
@@ -621,7 +631,7 @@ header .container .burger {
   padding: 30px 60px;
   border: 1px solid rgba(29, 146, 255, 0.1803921569);
   border-radius: 10px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .offers__content .offers__list .offer:hover {
   transform: scale(1.1);
@@ -786,13 +796,15 @@ header .container .burger {
   justify-content: space-between;
   align-items: center;
   background-image: url("/img/form-bg.png");
+  background-repeat: no-repeat;
   background-color: #002648;
-  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
   padding: 50px 60px;
 }
 .form__content .form-info {
-  max-width: 500px;
-  color: rgba(255, 238, 255, 0.9333333333);
+  max-width: 550px;
+  color: rgb(255, 255, 255);
 }
 .form__content .form-info .title {
   font-size: 36px;
@@ -844,6 +856,7 @@ header .container .burger {
 @media (max-width: 500px) {
   .form__content {
     padding: 40px 20px;
+    background-position: center;
   }
   .form__content .form-input {
     position: relative;
@@ -854,6 +867,83 @@ header .container .burger {
   }
   .form__content .form-input .submit-btn {
     right: 10px;
+  }
+}
+footer {
+  background-color: rgba(7, 12, 17, 0.9647058824);
+  padding: 125px 0;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+}
+footer .container .company-info {
+  max-width: 225px;
+  line-height: 30px;
+}
+footer .container .company-info__logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+footer .container .company-info__logo span {
+  color: #fefefe;
+  font-size: 20px;
+}
+footer .container .column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 25px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Poppins";
+  font-size: 16px;
+}
+footer .container .column__name {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+}
+footer .container .column .email {
+  width: 220px;
+  height: 40px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding-left: 15px;
+  color: #fefefe;
+  font-size: 16px;
+}
+footer .container .column .email::placeholder {
+  color: rgba(255, 238, 255, 0.661);
+  font-family: "Poppins";
+  font-size: 14px;
+}
+footer .container .column .social-media {
+  display: flex;
+  gap: 10px;
+}
+
+@media (max-width: 1100px) {
+  footer .container {
+    flex-wrap: wrap;
+    gap: 50px 30px;
+  }
+  footer .container .company-info {
+    min-width: 100%;
+    align-items: center;
+  }
+}
+@media (max-width: 768px) {
+  footer .container .column {
+    flex: 0 1 40%;
+  }
+}
+@media (max-width: 520px) {
+  footer {
+    padding: 50px 0;
+  }
+  footer .container .column {
+    flex: 0 1 100%;
   }
 }
 body {
