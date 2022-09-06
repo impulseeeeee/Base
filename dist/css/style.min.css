@@ -593,6 +593,269 @@ header .container .burger {
     padding: 30px;
   }
 }
+.offers {
+  margin: 80px 0;
+}
+.offers p {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 160%;
+  color: rgba(1, 7, 13, 0.7);
+}
+.offers__content .offers__title {
+  text-align: center;
+  margin-bottom: 90px;
+}
+.offers__content .offers__list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.offers__content .offers__list .offer {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  flex: 0 1 30%;
+  padding: 30px 60px;
+  border: 1px solid rgba(29, 146, 255, 0.1803921569);
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+.offers__content .offers__list .offer:hover {
+  transform: scale(1.1);
+  background: linear-gradient(180deg, #1D92FF 0%, #002648 0.01%, #002547 100%);
+  box-shadow: 0px 20px 100px rgba(0, 0, 0, 0.05);
+}
+.offers__content .offers__list .offer:hover h3,
+.offers__content .offers__list .offer:hover p,
+.offers__content .offers__list .offer:hover .price,
+.offers__content .offers__list .offer:hover .services .service span {
+  color: rgb(255, 255, 255);
+  opacity: 1;
+}
+.offers__content .offers__list .offer:hover .btn-container .btn-offer-mode-switch label {
+  color: #ffffff;
+}
+.offers__content .offers__list .offer:hover .btn-container .btn-offer-mode-switch .btn-offer-mode-switch-inner {
+  background: rgba(255, 255, 255, 0.119);
+}
+.offers__content .offers__list .offer:hover .btn-container .btn-offer-mode-switch .btn-offer-mode-switch-inner:before {
+  color: rgb(255, 255, 255);
+}
+.offers__content .offers__list .offer:hover .btn-container .btn-offer-mode-switch .btn-offer-mode-switch-inner:after {
+  background: #1D92FF;
+}
+.offers__content .offers__list .offer:hover .btn {
+  color: #1D92FF;
+  background: #fff;
+  transition: all 0.2s ease;
+}
+.offers__content .offers__list .offer h3 {
+  text-transform: uppercase;
+}
+.offers__content .offers__list .offer p {
+  text-align: center;
+}
+.offers__content .offers__list .offer .price {
+  font-family: "Poppins";
+  font-weight: 500;
+  font-size: 39px;
+  line-height: 135%;
+  color: #01070D;
+}
+.offers__content .offers__list .offer .btn-container {
+  display: inline-block;
+  padding: 10px 0;
+  text-align: center;
+}
+.offers__content .offers__list .offer .btn-container label {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 160%;
+  color: #01070D;
+}
+.offers__content .offers__list .offer .btn-container .btn-offer-mode-switch {
+  display: inline-block;
+  position: relative;
+}
+.offers__content .offers__list .offer .btn-container .btn-offer-mode-switch .btn-offer-mode-switch-inner {
+  margin: 0px;
+  width: 220px;
+  height: 36px;
+  background: #FAFAFA;
+  border: 0.5px solid rgba(1, 7, 13, 0.05);
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+.offers__content .offers__list .offer .btn-container .btn-offer-mode-switch .btn-offer-mode-switch-inner:before {
+  content: attr(data-on);
+  position: absolute;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 160%;
+  color: rgba(1, 7, 13, 0.4);
+  top: 7px;
+  right: 20px;
+  z-index: 10;
+}
+.offers__content .offers__list .offer .btn-container .btn-offer-mode-switch .btn-offer-mode-switch-inner.activated:before {
+  content: attr(data-off);
+  right: auto;
+  left: 20px;
+}
+.offers__content .offers__list .offer .btn-container .btn-offer-mode-switch .btn-offer-mode-switch-inner:after {
+  content: attr(data-off);
+  width: 110px;
+  height: 35px;
+  background: #FFFFFF;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 18px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  text-align: center;
+  transition: all 0.6s ease;
+  padding: 5px 0px;
+  z-index: 10;
+}
+.offers__content .offers__list .offer .btn-container .btn-offer-mode-switch .btn-offer-mode-switch-inner.activated:after {
+  content: attr(data-on);
+  left: 110px;
+}
+.offers__content .offers__list .offer .btn-container .checkbox {
+  display: none;
+}
+.offers__content .offers__list .offer .services {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.offers__content .offers__list .offer .services .service {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.offers__content .offers__list .offer .services .service span {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 160%;
+  color: #000000;
+  opacity: 0.6;
+}
+.offers__content .offers__list .offer .btn {
+  color: #FFFFFF;
+  background: #1D92FF;
+  padding: 12px 70px;
+}
+
+@media (max-width: 1100px) {
+  .offers__content .offers__list {
+    flex-wrap: wrap;
+    gap: 50px 20px;
+  }
+  .offers__content .offers__list .offer {
+    flex: 0 1 40%;
+  }
+}
+@media (max-width: 750px) {
+  .offers__content .offers__list .offer {
+    flex: 0 1 80%;
+  }
+}
+@media (max-width: 375px) {
+  .offers__content .offers__title {
+    margin-bottom: 40px;
+  }
+  .offers__content .offers__list {
+    gap: 30px 0;
+  }
+  .offers__content .offers__list .offer {
+    flex: 0 1 100%;
+    padding: 20px 30px;
+  }
+}
+.form__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: url("/img/form-bg.png");
+  background-color: #002648;
+  border-radius: 10px;
+  padding: 50px 60px;
+}
+.form__content .form-info {
+  max-width: 500px;
+  color: rgba(255, 238, 255, 0.9333333333);
+}
+.form__content .form-info .title {
+  font-size: 36px;
+}
+.form__content .form-info p {
+  margin-top: 25px;
+  font-size: 20px;
+  opacity: 0.7;
+}
+.form__content .form-input {
+  position: relative;
+}
+.form__content .form-input .email-input {
+  width: 460px;
+  height: 60px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.7);
+  padding-left: 30px;
+  color: #fefefe;
+  font-size: 20px;
+}
+.form__content .form-input .email-input::placeholder {
+  color: rgba(255, 238, 255, 0.661);
+  font-family: "Poppins";
+  font-size: 18px;
+}
+.form__content .form-input .submit-btn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  background: rgb(255, 255, 255);
+  width: 75px;
+  height: 40px;
+  border-radius: 20px;
+}
+.form__content .form-input span {
+  font-size: 30px;
+}
+
+@media (max-width: 1100px) {
+  .form__content {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+}
+@media (max-width: 500px) {
+  .form__content {
+    padding: 40px 20px;
+  }
+  .form__content .form-input {
+    position: relative;
+  }
+  .form__content .form-input .email-input {
+    width: 300px;
+    padding-left: 20px;
+  }
+  .form__content .form-input .submit-btn {
+    right: 10px;
+  }
+}
 body {
   background: rgb(252, 252, 252);
 }

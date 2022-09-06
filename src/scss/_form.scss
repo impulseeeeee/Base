@@ -1,0 +1,93 @@
+.form {
+    &__content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url("/img/form-bg.png");
+        background-color: #002648;
+        border-radius: 10px;
+        padding: 50px 60px;
+
+        .form-info {
+            max-width: 500px;
+            color: #fefe;
+
+            .title {
+                font-size: 36px;
+            }
+
+            p {
+                margin-top: 25px;
+                font-size: 20px;
+                opacity: 0.7;
+            }
+        }
+
+        .form-input {
+            position: relative;
+
+            .email-input {
+                width: 460px;
+                height: 60px;
+                border-radius: 30px;
+                background: rgba(0, 0, 0, 0);
+                border: 1px solid rgba(255, 255, 255, 0.7);
+                padding-left: 30px;
+                color: #fefefe;
+                font-size: 20px;
+
+                &::placeholder {
+                    color: rgba(255, 238, 255, 0.661);
+                    font-family: 'Poppins';
+                    font-size: 18px;
+                }
+            }
+
+            .submit-btn {
+                position: absolute;
+                top: 10px;
+                right: 20px;
+                background: rgb(255, 255, 255);
+                width: 75px;
+                height: 40px;
+                border-radius: 20px;
+            }
+
+            span {
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+@media (max-width:1100px) {
+    .form {
+        &__content {
+            flex-wrap: wrap;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;
+        }
+    }
+}
+
+@media (max-width:500px) {
+    .form {
+        &__content {
+            padding: 40px 20px;
+
+            .form-input {
+                position: relative;
+
+                .email-input {
+                    width: 300px;
+                    padding-left: 20px;
+                }
+
+                .submit-btn {
+                    right: 10px;
+                }
+            }
+        }
+    }
+}
