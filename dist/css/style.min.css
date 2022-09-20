@@ -155,6 +155,16 @@ h3 {
   text-transform: uppercase;
 }
 
+@media (max-width: 325px) {
+  h1 {
+    font-size: 40px;
+    line-height: 140%;
+  }
+  h2 {
+    font-size: 34px;
+    line-height: 135%;
+  }
+}
 body.active {
   overflow: hidden;
 }
@@ -186,7 +196,6 @@ header .container .menu {
 }
 header .container .menu a {
   font-family: "Poppins";
-  font-weight: 400;
   font-size: 16px;
   line-height: 130%;
   color: rgba(255, 255, 255, 0.6);
@@ -280,10 +289,12 @@ header .container .burger {
 .saas-banner {
   padding: 50px 0;
   background: #002547;
+  box-shadow: 0 20px 15px rgba(0, 0, 0, 0.3);
 }
 .saas-banner .container {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .saas-banner__info {
   display: flex;
@@ -295,6 +306,7 @@ header .container .burger {
   font-size: 18px;
   line-height: 160%;
   color: rgba(255, 255, 255, 0.7);
+  max-width: 50%;
 }
 .saas-banner__info span {
   color: #1D92FF;
@@ -336,6 +348,10 @@ header .container .burger {
   background: #002547;
   border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fefefe;
+}
+.saas-banner__info .buttons .blue:hover {
+  color: #1D92FF;
+  background: #fefefe;
 }
 .saas-banner__info .underlined {
   border-bottom: 5px solid #1D92FF;
@@ -389,6 +405,9 @@ header .container .burger {
   .saas-banner .saas-banner__info .buttons {
     flex-wrap: wrap;
     gap: 15px;
+  }
+  .saas-banner .saas-banner__info .buttons .btn {
+    padding: 20px 70px;
   }
 }
 .partners .container {
@@ -474,11 +493,19 @@ header .container .burger {
   padding: 15px 60px;
   background: #1D92FF;
   color: #fefefe;
+  border: 1px solid rgba(171, 171, 171, 0.317);
+}
+.stats .container .stats__info .stats__buttons .btn:hover {
+  color: #1D92FF;
+  background: #fefefe;
 }
 .stats .container .stats__info .stats__buttons .white {
-  border: 1px solid rgba(171, 171, 171, 0.317);
   background: #fefefe;
   color: #1D92FF;
+}
+.stats .container .stats__info .stats__buttons .white:hover {
+  color: #fefefe;
+  background: #1D92FF;
 }
 .stats .container .stats__info .facts {
   display: flex;
@@ -501,7 +528,7 @@ header .container .burger {
   color: #01070D;
   opacity: 0.5;
 }
-.stats .container .stats__info .facts .fact .fact__title:focus {
+.stats .container .stats__info .facts .fact .fact__title:focus-visible {
   color: #1D92FF;
   opacity: 1;
 }
@@ -903,6 +930,12 @@ footer .container .column__name {
   color: rgb(255, 255, 255);
   font-size: 20px;
 }
+footer .container .column a {
+  color: rgba(255, 255, 255, 0.7);
+}
+footer .container .column a:hover {
+  text-decoration: underline;
+}
 footer .container .column .email {
   width: 220px;
   height: 40px;
@@ -944,6 +977,9 @@ footer .container .column .social-media {
   }
   footer .container .column {
     flex: 0 1 100%;
+  }
+  footer .container .column p {
+    text-align: center;
   }
 }
 body {

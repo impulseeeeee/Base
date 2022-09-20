@@ -17,12 +17,22 @@
                     padding: 15px 60px;
                     background: #1D92FF;
                     color: #fefefe;
+                    border: 1px solid rgba(171, 171, 171, 0.317);
+
+                    &:hover {
+                        color: #1D92FF;
+                        background: #fefefe;
+                    }
                 }
 
                 .white {
-                    border: 1px solid rgba(171, 171, 171, 0.317);
                     background: #fefefe;
                     color: #1D92FF;
+
+                    &:hover {
+                        color: #fefefe;
+                        background: #1D92FF;
+                    }
                 }
             }
 
@@ -47,7 +57,7 @@
                         color: #01070D;
                         opacity: 0.5;
 
-                        &:focus {
+                        &:focus-visible {
                             color: #1D92FF;
                             opacity: 1;
                         }

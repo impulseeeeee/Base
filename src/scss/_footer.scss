@@ -36,6 +36,14 @@ footer {
                 font-size: 20px;
             }
 
+            a {
+                color: rgba(255, 255, 255, 0.7);
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
             .email {
                 width: 220px;
                 height: 40px;
@@ -92,6 +100,10 @@ footer {
         .container {
             .column {
                 flex: 0 1 100%;
+
+                p {
+                    text-align: center;
+                }
             }
         }
     }

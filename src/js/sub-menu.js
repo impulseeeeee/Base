@@ -4,6 +4,7 @@ document.querySelectorAll(".fact__title").forEach(element => {
         e.preventDefault();
         if (content.style.maxHeight) {
             document.querySelectorAll('.fact__info').forEach(element => element.style.maxHeight = null);
+
         } else {
             document.querySelectorAll('.fact__info').forEach(element => element.style.maxHeight = null);
             content.style.maxHeight = content.scrollHeight + 'px';

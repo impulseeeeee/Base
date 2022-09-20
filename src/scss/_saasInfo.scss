@@ -1,10 +1,12 @@
 .saas-banner {
     padding: 50px 0;
     background: #002547;
+    box-shadow: 0 20px 15px rgba(0, 0, 0, 0.3);
 
     .container {
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 
     &__info {
@@ -17,6 +19,7 @@
         font-size: 18px;
         line-height: 160%;
         color: rgba(255, 255, 255, 0.7);
+        max-width: 50%;
 
         span {
             color: #1D92FF;
@@ -63,6 +66,11 @@
                 background: #002547;
                 border: 1px solid rgba(255, 255, 255, 0.1);
                 color: #fefefe;
+
+                &:hover {
+                    color: #1D92FF;
+                    background: #fefefe;
+                }
             }
         }
 
@@ -130,6 +138,10 @@
             .buttons {
                 flex-wrap: wrap;
                 gap: 15px;
+
+                .btn {
+                    padding: 20px 70px;
+                }
             }
         }
     }
